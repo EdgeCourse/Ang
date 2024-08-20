@@ -1,0 +1,25 @@
+<!--
+<form #profileForm="ngForm" (ngSubmit)="saveProfile(profileForm)">
+  <input type="text" name="name" ngModel placeholder="Name">
+  <input type="email" name="email" ngModel placeholder="Email">
+  <button type="submit">Save Profile</button>
+</form>
+
+<div *ngIf="userProfile">
+  <h2>Saved Profile</h2>
+  <p>Name: {{ userProfile.name }}</p>
+  <p>Email: {{ userProfile.email }}</p>
+</div>
+-->
+
+<form #profileForm="ngForm" (ngSubmit)="saveProfile(profileForm)">
+  <input type="text" name="name" [(ngModel)]="userProfile.name" placeholder="Name">
+  <input type="email" name="email" [(ngModel)]="userProfile.email" placeholder="Email">
+  <button type="submit">Save Profile</button>
+</form>
+
+<div *ngIf="userProfile">
+  <h2>Saved Profile</h2>
+  <p>Name: {{ userProfile.name }}</p>
+  <p>Email: {{ userProfile.email }}</p>
+</div>
