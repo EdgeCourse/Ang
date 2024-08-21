@@ -1,0 +1,10 @@
+<h2>Posts from JSONPlaceholder</h2>
+
+<div *ngIf="errorMessage">{{ errorMessage }}</div>
+
+<div *ngIf="loading">Loading...</div>
+
+<div *ngFor="let post of filteredPosts$ | async">
+  <h3>{{ post.title }}</h3>
+  <p>{{ post.body }}</p>
+</div>
